@@ -34,7 +34,7 @@ namespace WebApplication1
             string fname = TextBox1.Text;
             string lname = TextBox2.Text;
 
-            Label6.Text = fname + " your form is submited.";
+           // Label6.Text = fname + " your form is submited.";
 
             if((FileUpload1 != null) && (FileUpload1.PostedFile.ContentLength == 1))
             {

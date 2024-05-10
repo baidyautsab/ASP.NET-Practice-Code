@@ -13,5 +13,18 @@ namespace WebApplication1
         {
 
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            string Name = NameBox.Text;
+            string Email = EmailBox.Text;
+            string Password = PwdBox.Text;
+            string Phone = PhoneBox.Text;
+
+            if (Name == "Utsab Baidya" && Email == "utsab2047@gmail.com" && Password == "Utsab@123" && Phone == "08343838660")
+                Server.Transfer("Success.aspx");
+            else
+                Response.Redirect("Failure.aspx?Name=" + Name);
+        }
     }
 }

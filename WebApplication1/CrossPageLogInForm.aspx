@@ -4,11 +4,19 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Cross Page LogIn Form</title>
+    <style>
+        .my-form{
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
-    <h1>Cross Page PostBack</h1>
-    <form id="form1" runat="server">
+    <h1 style="text-align: center">Cross Page PostBack</h1>
+    <form class="my-form" id="form1" runat="server">
         <div>
             <!-- we can't align server controls thats why use html controls(table) for alignment -->
             <table>
@@ -34,7 +42,8 @@
                 <tr>
                     <td> 
                         <!-- data should be send from CrossPageLogInForm to ValidationPage -->
-                        <asp:Button ID="Button1" runat="server" Text="LogIn" PostBackUrl="~/ValidationPage.aspx" />
+                        <!-- <asp:Button ID="Button1" runat="server" Text="LogIn" PostBackUrl="~/ValidationPage.aspx" /> -->
+                        <asp:Button ID="Button2" runat="server" Text="LogIn" OnClick="Button2_Click" />
                     </td>
                 </tr>
             </table>
